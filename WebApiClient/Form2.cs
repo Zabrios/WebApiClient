@@ -17,17 +17,18 @@ namespace WebApiClient
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             AlumnoModelView alumno = new AlumnoModelView(txtName.Text, txtLastname.Text, txtDni.Text);
-
-            if (HttpApiController.PostCall(alumno).Result)
+            bool okStatus = await Task.Run(() => HttpApiController.PostCall(alumno).Result);
+            if (okStatus)
             {
-                MessageBox.Show("Insertion ok.");
+                MessageBox.Show(Resources.InsertOk, Resources.MBHeader);
+                txtName.Clear(); txtLastname.Clear(); txtDni.Clear();
             }
             else
             {
-                MessageBox.Show("Insertion fail.");
+                MessageBox.Show(Resources.InsertionFail, Resources.MBHeader);
 
             }
         }

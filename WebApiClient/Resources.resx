@@ -132,4 +132,13 @@
   <data name="www" xml:space="preserve">
     <value>aaaaaaaaaaaaaaaaaaaaaa</value>
   </data>
+  <data name="InsertionFail" xml:space="preserve">
+    <value>Insertion failed.</value>
+  </data>
+  <data name="InsertOk" xml:space="preserve">
+    <value>Insertion ok.</value>
+  </data>
+  <data name="MBHeader" xml:space="preserve">
+    <value>WebApiClient</value>
+  </data>
 </root>

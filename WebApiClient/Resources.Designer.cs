@@ -70,6 +70,33 @@ namespace WebApiClient {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Insertion failed..
+        /// </summary>
+        internal static string InsertionFail {
+            get {
+                return ResourceManager.GetString("InsertionFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insertion ok..
+        /// </summary>
+        internal static string InsertOk {
+            get {
+                return ResourceManager.GetString("InsertOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a WebApiClient.
+        /// </summary>
+        internal static string MBHeader {
+            get {
+                return ResourceManager.GetString("MBHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Response Message Header.
         /// </summary>
         internal static string ReqMessageHead {
