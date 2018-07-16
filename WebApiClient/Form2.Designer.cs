@@ -28,32 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtName.Location = new System.Drawing.Point(97, 52);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 0;
             // 
-            // textBox2
+            // txtLastname
             // 
-            this.textBox2.Location = new System.Drawing.Point(87, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtLastname.Location = new System.Drawing.Point(97, 89);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(100, 20);
+            this.txtLastname.TabIndex = 1;
             // 
-            // textBox3
+            // txtDni
             // 
-            this.textBox3.Location = new System.Drawing.Point(87, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtDni.Location = new System.Drawing.Point(97, 124);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(100, 20);
+            this.txtDni.TabIndex = 2;
             // 
             // button1
             // 
@@ -63,16 +66,47 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(27, 52);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(47, 13);
+            this.lblName.TabIndex = 4;
+            this.lblName.Text = "Nombre:";
+            // 
+            // lblLastname
+            // 
+            this.lblLastname.AutoSize = true;
+            this.lblLastname.Location = new System.Drawing.Point(26, 92);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(55, 13);
+            this.lblLastname.TabIndex = 5;
+            this.lblLastname.Text = "Apellidos: ";
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(27, 127);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(29, 13);
+            this.lblDni.TabIndex = 6;
+            this.lblDni.Text = "DNI:";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(255, 212);
+            this.Controls.Add(this.lblDni);
+            this.Controls.Add(this.lblLastname);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDni);
+            this.Controls.Add(this.txtLastname);
+            this.Controls.Add(this.txtName);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -82,9 +116,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtLastname;
+        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblLastname;
+        private System.Windows.Forms.Label lblDni;
     }
 }

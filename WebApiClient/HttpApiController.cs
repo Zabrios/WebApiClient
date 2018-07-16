@@ -11,17 +11,17 @@ using System.Net.Http.Headers;
 
 namespace WebApiClient
 {
-    public class HttpApiController
+    public static class HttpApiController
     {
         static HttpClient client;
-        public HttpApiController() { }
+        //public HttpApiController() { }
         static HttpApiController()
         {
             client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:13246/");
         }
 
-        public async Task<List<AlumnoModelView>> GetCall()
+        public static async Task<List<AlumnoModelView>> GetCall()
         {
             IEnumerable<AlumnoModelView> listaAlumnos = new List<AlumnoModelView>();
             try
@@ -48,7 +48,7 @@ namespace WebApiClient
             return listaAlumnos.ToList();
         }
 
-        public async void PostCall(AlumnoModelView alumno)
+        public static async Task<bool> PostCall(AlumnoModelView alumno)
         {
             try
             {
@@ -57,6 +57,7 @@ namespace WebApiClient
                 var byteContent = new ByteArrayContent(buffer);
                 byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                 var result = await client.PostAsync(Resources.apiGet, byteContent);
+                return result.IsSuccessStatusCode;
             }
             catch (Exception ex)
             {

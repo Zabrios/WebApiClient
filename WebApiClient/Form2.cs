@@ -16,5 +16,20 @@ namespace WebApiClient
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AlumnoModelView alumno = new AlumnoModelView(txtName.Text, txtLastname.Text, txtDni.Text);
+
+            if (HttpApiController.PostCall(alumno).Result)
+            {
+                MessageBox.Show("Insertion ok.");
+            }
+            else
+            {
+                MessageBox.Show("Insertion fail.");
+
+            }
+        }
     }
 }
