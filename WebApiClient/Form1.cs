@@ -33,6 +33,9 @@ namespace WebApiClient
 
         private void button2_Click(object sender, EventArgs e)
         {
+            AlumnoModelView al = new AlumnoModelView("John", "Vergas", "9999999");
+            controller.PostCall(al);
+
             Form2 f2 = new Form2();
             f2.Show();
             //f2.Close();

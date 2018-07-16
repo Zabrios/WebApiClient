@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,22 @@ namespace WebApiClient
 {
     public class AlumnoModelView
     {
+        [JsonConstructor]
         public AlumnoModelView(int id, string nombre, string apellidos, string dni)
         {
             Id = id;
+            Nombre = nombre;
+            Apellidos = apellidos;
+            Dni = dni;
+        }
+
+        public AlumnoModelView()
+        {
+
+        }
+
+        public AlumnoModelView(string nombre, string apellidos, string dni)
+        {
             Nombre = nombre;
             Apellidos = apellidos;
             Dni = dni;

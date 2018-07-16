@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Resources;
+using System.Net.Http.Headers;
 
 namespace WebApiClient
 {
@@ -25,7 +26,6 @@ namespace WebApiClient
             IEnumerable<AlumnoModelView> listaAlumnos = new List<AlumnoModelView>();
             try
             {
-
                 HttpResponseMessage response = client.GetAsync(Resources.apiGet).Result;
                 if (response.IsSuccessStatusCode)
                 {
@@ -48,5 +48,20 @@ namespace WebApiClient
             return listaAlumnos.ToList();
         }
 
+        public async void PostCall(AlumnoModelView alumno)
+        {
+            try
+            {
+                var myContent = JsonConvert.SerializeObject(alumno);
+                var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
+                var byteContent = new ByteArrayContent(buffer);
+                byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                var result = await client.PostAsync(Resources.apiGet, byteContent);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
