@@ -37,5 +37,19 @@ namespace WebApiClient
             f2.Show();
             //f2.Close();
         }
+
+        private void GridAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form2 f2 = new Form2();
+            var alumnoUpdate = new AlumnoModelView(Convert.ToInt32(GridAlumnos.CurrentRow.Cells[0].Value), GridAlumnos.CurrentRow.Cells[1].Value.ToString(),
+                                                   GridAlumnos.CurrentRow.Cells[2].Value.ToString(), GridAlumnos.CurrentRow.Cells[3].Value.ToString());
+            f2.UpdateRowForm(alumnoUpdate);
+            //f2.txtName.Text = this.GridAlumnos.CurrentRow.Cells[1].Value.ToString();
+            //f2.txtLastname.Text = this.GridAlumnos.CurrentRow.Cells[2].Value.ToString();
+            //f2.txtDni.Text = this.GridAlumnos.CurrentRow.Cells[3].Value.ToString();
+            f2.ShowDialog();
+            GridAlumnos.Refresh();
+
+        }
     }
 }

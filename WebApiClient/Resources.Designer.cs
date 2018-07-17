@@ -70,6 +70,15 @@ namespace WebApiClient {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a api/Alumnoes/.
+        /// </summary>
+        internal static string apiPut {
+            get {
+                return ResourceManager.GetString("apiPut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Insertion failed..
         /// </summary>
         internal static string InsertionFail {

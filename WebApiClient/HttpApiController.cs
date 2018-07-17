@@ -64,5 +64,25 @@ namespace WebApiClient
                 throw ex;
             }
         }
+
+        public static async void PutCall(AlumnoModelView alumno)
+        {
+            try
+            {
+                var myContent = JsonConvert.SerializeObject(alumno);
+                var content = new StringContent(myContent, Encoding.UTF8, "application/json");
+                //var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
+                //var byteContent = new ByteArrayContent(buffer);
+                //byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                var result = await client.PutAsync(Resources.apiPut+alumno.Id, content);
+                result.EnsureSuccessStatusCode();
+                Console.WriteLine(await result.Content.ReadAsStringAsync());
+                //return result.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

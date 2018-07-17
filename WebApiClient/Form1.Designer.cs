@@ -40,8 +40,10 @@
             this.GridAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridAlumnos.Location = new System.Drawing.Point(35, 32);
             this.GridAlumnos.Name = "GridAlumnos";
+            this.GridAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridAlumnos.Size = new System.Drawing.Size(400, 209);
             this.GridAlumnos.TabIndex = 0;
+            this.GridAlumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAlumnos_CellDoubleClick);
             // 
             // button1
             // 

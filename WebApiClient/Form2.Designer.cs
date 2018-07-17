@@ -115,13 +115,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtLastname;
-        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblLastname;
         private System.Windows.Forms.Label lblDni;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtLastname;
+        public System.Windows.Forms.TextBox txtDni;
     }
 }

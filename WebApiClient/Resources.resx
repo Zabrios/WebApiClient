@@ -132,6 +132,9 @@
   <data name="www" xml:space="preserve">
     <value>aaaaaaaaaaaaaaaaaaaaaa</value>
   </data>
+  <data name="apiPut" xml:space="preserve">
+    <value>api/Alumnoes/</value>
+  </data>
   <data name="InsertionFail" xml:space="preserve">
     <value>Insertion failed.</value>
   </data>
